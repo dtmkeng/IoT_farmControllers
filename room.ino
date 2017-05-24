@@ -255,20 +255,46 @@ void loop() {
      }
   if(EvenPumpWater1){   
         conPumpWater = ON;
-        
+     switch(state){
+      case 1:{
      if(CheckTime>settime_1_pump+Timedelay){
         EvenPumpWater1=0;
        }
-       settime_2_pump = CheckTime;
-     if(CheckTime>settime_2_pump+Timedelay){
-        conPumpWater=OFF;
+//       settime_2_pump = CheckTime;
+//     if(CheckTime>settime_2_pump+Timedelay){
+//        conPumpWater=OFF;
+//       }
+//       settime_3_pump = CheckTime;
+//      if(CheckTime>settime_3_pump+Timedelay){
+//        conPumpWater=OFF;}
+       break;
        }
-       settime_3_pump = CheckTime;
-      if(CheckTime>settime_3_pump+Timedelay){
-        conPumpWater=OFF;
-       }
-      
-    }
+       case 2:{
+          if(CheckTime>settime_1_pump+Timedelay){
+              EvenPumpWater1=0;
+            }
+             settime_2_pump = CheckTime;
+            if(CheckTime>settime_2_pump+Timedelay){
+            conPumpWater=OFF;
+       } 
+       break;
+      }
+      case 3:{
+        if(CheckTime>settime_1_pump+Timedelay){
+              EvenPumpWater1=0;
+            }
+             settime_2_pump = CheckTime;
+            if(CheckTime>settime_2_pump+Timedelay){
+            conPumpWater=OFF;
+            } 
+           settime_3_pump = CheckTime;
+             if(CheckTime>settime_3_pump+Timedelay){
+             conPumpWater=OFF;}
+             break;
+        }
+     }
+   
+ }
     else{
        conPumpWater=OFF; 
        EvenPumpWater1=0;
