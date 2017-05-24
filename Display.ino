@@ -7,8 +7,12 @@ void Display(){
     case 2:{ 
       showDisplay2();
       break;}
+     case 3:{
+      showDisplay3();
+      break;}
+      }
     }
-  }
+  
 void showDisplay1(){
       lcd.setCursor(5, 0);
       lcd.print("SMART FARM");
@@ -82,3 +86,44 @@ void showDisplay1(){
       lcd.setCursor(12, 3);
       lcd.print(str);
  }
+ void showDisplay3(){
+      lcd.setCursor(4,0);
+      lcd.print("Times Setted");
+      lcd.setCursor(0,1);
+      lcd.print("T1");
+      lcd.setCursor(3,1);
+      lcd.print(settime_1_pump);
+      lcd.setCursor(6,1);
+      lcd.print("min");
+      lcd.setCursor(10,1);
+      lcd.print("TLCD");
+      lcd.setCursor(15,1);
+      lcd.print(LCDtime);
+      lcd.setCursor(17,1);
+      lcd.print("Sec");
+      
+
+      lcd.setCursor(0,2);
+      lcd.print("T2");
+      lcd.setCursor(3,2);
+      lcd.print(settime_2_pump);
+      lcd.setCursor(6,2);
+      lcd.print("min");
+      lcd.setCursor(10,2);
+      lcd.print("TRE");
+      lcd.setCursor(15,2);
+      lcd.print(Timedelay);
+      lcd.setCursor(17,2);
+      lcd.print("min");
+
+      lcd.setCursor(0,3);
+      lcd.print("T3");
+      lcd.setCursor(3,3);
+      lcd.print(settime_3_pump);
+      lcd.setCursor(6,3);
+      lcd.print("min");
+      
+      
+      
+      
+  }
